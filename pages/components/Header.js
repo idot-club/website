@@ -1,11 +1,15 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import styles from './header.module.css';
 
 export default function Header() {
   return (
   	<header>
-  		<div className="container">
+  		<div className={`container ${styles.header}`}>
         <Link href="/">
-          <a><img src="/img/logo.svg" alt="IDOT logo" /></a>
+          <a className={styles.logoLink}>
+            <img src="/img/logo.svg" alt="IDOT logo" className={styles.logo} />
+          </a>
         </Link>
         <Nav />
   		</div>
@@ -15,24 +19,32 @@ export default function Header() {
 
 function Nav() {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/about"><a>About</a></Link>
+          <NavLink href="/about">About</NavLink>
         </li>
         <li>
-          <Link href="/for-students"><a>For Students</a></Link>
+          <NavLink href="/for-students">For Students</NavLink>
         </li>
         <li>
-          <Link href="/programs"><a>Programs</a></Link>
+          <NavLink href="/programs">Programs</NavLink>
         </li>
         <li>
-          <Link href="/partner-with-us"><a>Partner with Us</a></Link>
+          <NavLink href="/partner-with-us">Partner with Us</NavLink>
         </li>
         <li>
-          <Link href="/get-involved"><a>Get Involved</a></Link>
+          <NavLink href="/get-involved">Get Involved</NavLink>
         </li>
       </ul>
     </nav>
+  );
+}
+
+function NavLink({ href, children }) {
+  const router = useRouter();
+  const activeClass = router.pathname === href ? styles.active : null;
+  return (
+    <Link href={href}><a className={activeClass}>{children}</a></Link>
   );
 }

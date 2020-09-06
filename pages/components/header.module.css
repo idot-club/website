@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logoLink {
+  display: flex;
+}
+
+.logo {
+  width: 90px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
+  color: var(--black);
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 21px;
+}
+
+.nav a.active {
+  background: var(--gold);
+}
