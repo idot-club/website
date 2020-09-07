@@ -1,9 +1,29 @@
+import { useRef, useEffect } from 'react';
 import Layout from './components/Layout';
 import CTASection from './components/CTASection'
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
+import InstagramFeed from '@jsanahuja/instagramfeed';
 import styles from './index.module.css';
 
 export default function Home() {
+  const instagramFeedRef = useRef(null);
+  useEffect(() => {
+    (() => new InstagramFeed({
+        'username': 'idot.club',
+        'container': instagramFeedRef.current,
+        'display_profile': false,
+        'display_biography': false,
+        'display_gallery': true,
+        'callback': null,
+        'styling': false,
+        'items': 6,
+        'items_per_row': 3,
+        'margin': 1,
+        'lazy_load': true,
+        'on_error': console.error
+    }))();
+  }, []);
+
   return (
     <Layout>
       <section className={styles.introSection}>
@@ -32,7 +52,7 @@ export default function Home() {
           </Grid>
         </div>
       </section>
-      
+
       <div className="container">
         <Grid fluid>
           <h1>Our Pillars</h1>
@@ -61,6 +81,12 @@ export default function Home() {
         </Grid>
       </div>
 
+      <section className={styles.instagramFeed}>
+        <div className="container">
+          <h1>Follow <a href="https://www.instagram.com/idot.club/" target="_blank">@idot.club</a> on Instagram</h1>
+          <div ref={instagramFeedRef}></div>
+        </div>
+      </section>
 
       <div className="container">
         <Grid fluid>

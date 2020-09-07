@@ -78,7 +78,7 @@ h2 {
 }
 
 a {
-  font-size: 1.8rem;
+  /*font-size: 1.8rem;*/
   color: var(--red);
   text-decoration: underline;
 }
@@ -107,4 +107,36 @@ a.button:hover {
 
 section {
   padding: 40px 0;
+}
+
+.instagram_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.instagram_gallery a {
+  flex-basis: 32%;
+  margin-bottom: 2%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.instagram_gallery a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+}
+
+.instagram_gallery a:hover::before {
+  background: var(--teal);
+  opacity: 0.8;
+}
+
+.instagram_gallery img {
+  width: 100%;
+  display: block;
 }
