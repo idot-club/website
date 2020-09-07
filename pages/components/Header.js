@@ -4,8 +4,8 @@ import styles from './header.module.css';
 
 export default function Header() {
   return (
-  	<header>
-  		<div className={`container ${styles.header}`}>
+  	<header className={styles.header}>
+  		<div className={`container ${styles.headerContainer} gridPadding`}>
         <Link href="/">
           <a className={styles.logoLink}>
             <img src="/img/logo.svg" alt="IDOT logo" className={styles.logo} />
@@ -32,9 +32,6 @@ function Nav() {
         </li>
         <li>
           <NavLink href="/partner-with-us">Partner with Us</NavLink>
-        </li>
-        <li>
-          <NavLink href="/get-involved">Get Involved</NavLink>
         </li>
       </ul>
     </nav>

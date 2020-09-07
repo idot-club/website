@@ -1,0 +1,42 @@
+.introSection {
+  background: var(--light-grey);
+  padding-bottom: 60px;
+}
+
+.introVideoWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.introVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pillars img {
+  width: 70px;
+  height: auto;
+}
+
+.pillars h3 {
+  margin-bottom: 0;
+}
+
+.pillars p {
+  font-size: 1.5rem;
+}
+
+.announcementSection {
+  background: var(--gold);
+  padding: 40px 0;
+}
+
+.announcement {
+  background: white;
+  padding: 30px;
+}

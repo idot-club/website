@@ -1,0 +1,12 @@
+.ctaSection {
+  margin: 40px 0;
+}
+
+.ctaContainer {
+  background: var(--light-grey);
+  padding: 30px 10px;
+}
+
+.ctaContainer h2 {
+  margin-top: 0;
+}

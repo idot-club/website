@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
+  --light-grey: #f5fafa;
 	--black: #353535;
 	--teal: #6FD1C5;
+  --light-teal: #CBF4EF;
+  --dark-teal: #0f7b6c;
 	--gold: #FBB25C;
+  --light-gold: #FFE4C3;
+  --red: #E44848;
 }
 
 * {
@@ -22,12 +27,84 @@ body {
 }
 
 .container {
-  width: 1000px;
+  max-width: 1032px;
   margin: 0 auto;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+}
+
+/* <Grid> adds padding-left and padding-right.
+Match the .container to the <Grid> container */
+.container.gridPadding {
+  padding: 0 16px;
+}
+
+p {
+  line-height: 1.6;
+  margin: 16px 0;
+}
+
+p.largeText {
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 h1 {
 	font-size: 3.6rem;
 	font-weight: 400;
+  line-height: 1.4;
+}
+
+h1 strong {
+  color: var(--dark-teal);
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+a {
+  font-size: 1.8rem;
+  color: var(--red);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+a.button {
+  display: inline-block;
+  padding: 16px 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+
+  background-image: radial-gradient(var(--gold) 1%, var(--gold) 1%, var(--red) 1%, var(--red) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  transition: 0.2s;
+}
+
+a.button:hover {
+  background-size: 10000% 10000%;
+}
+
+section {
+  padding: 40px 0;
 }

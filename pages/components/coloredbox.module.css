@@ -1,0 +1,30 @@
+.coloredBox {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.coloredBox h2 {
+  margin-top: 0;
+}
+
+.coloredBox p:last-child {
+  margin-bottom: 0;
+}
+
+.coloredBox ol,
+.coloredBox ul {
+  margin-left: 20px;
+}
+
+.coloredBox li {
+  padding-left: 10px;
+}
+
+.coloredBox.lightTeal {
+  background: var(--light-teal);
+}
+
+.coloredBox.lightGold {
+  background: var(--light-gold);
+}
