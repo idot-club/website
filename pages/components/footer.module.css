@@ -8,6 +8,26 @@
   text-align: center;
 }
 
+.socialMediaIcon {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--light-gold);
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.socialMediaIcon:hover {
+  background: var(--light-teal);
+}
+
+.socialMediaIcon img {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
 .footerGraphicWrapper {
   position: relative;
   width: 100%;
